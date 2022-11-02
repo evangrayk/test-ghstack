@@ -15,7 +15,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Look for a specific file that means we should make the action fail
+      - name: Look for a specific file to exist, otherwise fail
         run: |
-          ls ${{ github.workspace }}/FAIL_CI
+          ls ${{ github.workspace }}/mandatoryFileElseFailCI
       - run: echo "🍏 This job's status is ${{ job.status }}."
